@@ -1,6 +1,6 @@
 .projects-main {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .basic-projects {
@@ -22,9 +22,9 @@
   justify-content: center;
 }
 
-.projects-heading-text-div {
+/* .projects-heading-text-div {
   text-align: center;
-}
+} */
 
 .projects-heading-img-div > * {
   max-width: 100%;
@@ -105,7 +105,7 @@
     margin-right: 0px;
     margin-left: 0px;
     line-height: normal;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .repo-cards-div-main {

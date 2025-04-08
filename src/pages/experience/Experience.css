@@ -21,9 +21,9 @@
   justify-content: center;
 }
 
-.experience-heading-text-div {
+/* .experience-heading-text-div {
   text-align: center;
-}
+} */
 
 .experience-heading-img-div > * {
   max-width: 100%;
@@ -81,8 +81,8 @@
 
   .experience-header-detail-text {
     font-size: 16px;
-    margin-right: 0px;
+    /* margin-right: 0px; */
     line-height: normal;
-    text-align: center;
+    /* text-align: center; */
   }
 }

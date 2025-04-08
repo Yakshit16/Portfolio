@@ -18,6 +18,7 @@ const phoneSection = contactPageData.phoneSection;
 class Contact extends Component {
   render() {
     const theme = this.props.theme;
+    const isMobile = window.innerWidth < 768; // You can tweak this breakpoint
     return (
       <div className="contact-main">
         <Header theme={theme} />
@@ -45,12 +46,14 @@ class Contact extends Component {
                 </p>
                 <SocialMedia theme={theme} />
                 <div className="resume-btn-div">
-                  <Button
-                    text="See My Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                    theme={theme}
-                  />
+                  <a href={greeting.resumeLink} download="Yakshit_Resume.pdf">
+                    <Button
+                      text="See My Resume"
+                      newTab={true}
+                      href={greeting.resumeLink}
+                      theme={theme}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -67,14 +70,14 @@ class Contact extends Component {
                 >
                   {blogSection["subtitle"]}
                 </p>
-                <div className="blogsite-btn-div">
+                {/* <div className="blogsite-btn-div">
                   <Button
                     text="Visit My Blogsite"
                     newTab={true}
                     href={blogSection.link}
                     theme={theme}
                   />
-                </div>
+                </div> */}
               </div>
               <div className="blog-heading-img-div">
                 {/* <img
@@ -82,51 +85,6 @@ class Contact extends Component {
 											alt=""
 										/> */}
                 <BlogsImg theme={theme} />
-              </div>
-            </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <AddressImg theme={theme} />
-              </div>
-              <div className="address-heading-text-div">
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {addressSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {addressSection["subtitle"]}
-                </p>
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {phoneSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {phoneSection["subtitle"]}
-                </p>
-                <div className="address-btn-div">
-                  <Button
-                    text="Visit on Google Maps"
-                    newTab={true}
-                    href={addressSection.location_map_link}
-                    theme={theme}
-                  />
-                </div>
               </div>
             </div>
           </Fade>
