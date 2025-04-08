@@ -179,8 +179,8 @@
 
   .contact-header-detail-text {
     font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
+    /* margin-left: 0px;
+    margin-right: 0px; */
     line-height: normal;
     text-align: center;
   }
